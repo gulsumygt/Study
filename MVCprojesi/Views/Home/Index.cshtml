@@ -1,0 +1,10 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<!--burada partial view'i action metodu ile çağırdık.Eğer html.
+    partial ile çağırsaydık o partial view'in action metodunu göstermeden direk view gösterirdi.
+    html.action ile çağırdığımız zaman action metodunun içine girip orada dönen view'i gösterir.
+    -->
+@Html.Action("SonBesMakale")
+
