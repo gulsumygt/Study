@@ -23,7 +23,7 @@ namespace MVCprojesi.Data
         [DataType(DataType.DateTime, ErrorMessage = "Lütfen makalenin eklenme  tarihini, doğru bir şekilde giriniz.")]
         public DateTime Tarih { get; set; }
         public virtual List<Yorum> Yorums { get; set; }
-        public virtual List<Etiket> Etikets { get; set; } 
- 
+        public virtual List<Etiket> Etikets { get; set; }
+        public Uye Uye { get; set; }
     }
 }

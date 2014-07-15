@@ -23,6 +23,14 @@ namespace MVCprojesi.Controllers
             List<Makale> makaleListe = db.Makales.OrderByDescending(i => i.Tarih).Take(5).ToList();
             return PartialView(makaleListe);
         }
+
+        public ActionResult SonBesYorum()
+        {
+            MVCprojesiContext db = new MVCprojesiContext();
+            List<Yorum> yorumliste = db.Yorums.OrderByDescending(i => i.Tarih).Take(5).ToList();
+            return PartialView(yorumliste);
+
+        }
        
     }
 }

@@ -6,5 +6,13 @@
     partial ile çağırsaydık o partial view'in action metodunu göstermeden direk view gösterirdi.
     html.action ile çağırdığımız zaman action metodunun içine girip orada dönen view'i gösterir.
     -->
-@Html.Action("SonBesMakale")
+<div style="width:75%;float:left">
+    <!--Burada Partial View yerine Html.Action metodunu çağırdık-->
+    @Html.Action("SonBesMakale")
+</div>
+<!--Bu div, bizim yan kenar içeriğimiz. Genişliğin, %25'ini almasını ve sola,
+    ana divin yanına, yaslanmasını istedik. -->
+<div style="width:25%;float:left">
+    @Html.Action("SonBesYorum")
+</div>
 
