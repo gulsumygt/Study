@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2014 by anonymous (http://jsbin.com/zufeforo/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+  <title>JS Bin</title>
+
+<style id="jsbin-css">
+
+</style>
+</head>
+<body>
+<p id='message'>
+<script>
+function write(message){
+  document.getElementById('message').innerHTML += message + '</br>';
+}
+var joe={name:"joeseph"};
+
+var joe2={name:"joeseph"};
+
+write("joe equels joe: "+(joe===joe));
+
+write("joe equels joe2: "+(joe===joe2)+"</br>");
+
+write("apple equels apple: "+ ("apple"==="apple"));
+
+write("'apple' = 'cat': "+ ("apple"==="cat"));
+
+write("16 = 16:" + (16===16));
+
+write('1 == "1": ' + (1=="1"));
+
+write('1 !== 2:'+(1!==2));
+
+write('"" == 0: ' + (""==0));//== operatorü yanlış sonuç verir.
+ write("---------------------------------------------------");
+
+ function add(num1,num2){
+   write(typeof num2);
+   return num1+num2;
+ }
+
+write(add(1,2,99));
+write(add(3)+'</br>');
+
+//primitives are pass by value
+
+var name="tom";
+function reverse(a){
+  a=a.split('').reverse().join('');
+  return a;
+}
+write(reverse(name));
+write(name +'</br>');
+
+//object are pass by reference
+var tom={name:"tom"};
+function reversePersonName(p){
+  p.name=reverse(p.name);
+}
+ write(reversePersonName(tom).name);
+write(tom.name);
+
+//arguments is not array
+/*function argumentsType(){
+  write("length of argument:" + arguments.length);
+ write("arguments[0} :" + arguments[0]);
+  return typeof arguments;
+}
+write("type of arguments: " + argumentsType("a") + "</br>");
+//function that can be called any parameters
+ function adds(){
+   var total=0;
+   for(var i=0;i<arguments.length;i++){
+     total += arguments[i];
+   }
+   return total;
+ }
+
+write(adds());
+write(adds(5));*/
+</script>
+</body>
+</html>
