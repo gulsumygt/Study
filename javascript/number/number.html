@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2014 by anonymous (http://jsbin.com/luciheda/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+  <title>JS Bin</title>
+
+<style id="jsbin-css">
+
+</style>
+</head>
+<body>
+<p id='message'>
+<script>
+function write(message){
+  document.getElementById('message').innerHTML += message + '</br>';
+}
+function newParagraph(){
+  write("");
+}
+//number type
+write("number type of '1': "+ typeof 1);
+newParagraph();
+//operator
+
+write("1 + 1 = "+ (1+1));
+write("10 - 1 = "+(10-1));
+write("3 * 4 = "+(3*4));
+write("22 / 7 = "+(22/7));
+write("22 % 10 = "+(22%10));
+newParagraph();
+//hatakı ondalık kesirler(inexact decimal fractions)
+write("0.1+0.2 = "+(0.1+0.2));
+write("0.1+0.2.toFixed(1) = "+(0.1+0.2).toFixed(1));//virgülden sonra 1 basamak ile sınırlar
+write("(0.1*10+0.2*10)/10 = " +((0.1*10+0.2*10)/10));
+</script>
+</body>
+</html>

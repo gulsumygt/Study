@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2014 by anonymous (http://jsbin.com/lopeguda/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+  <title>JS Bin</title>
+
+<style id="jsbin-css">
+
+</style>
+</head>
+<body>
+<p id='message'>
+<script>
+function write(message){
+  document.getElementById('message').innerHTML += message + '</br>';
+}
+ //javascript conditional controls
+function introduce(beatle){
+  switch(beatle){
+    case "ringo":
+      write("i'm ringo and i play the drums");
+      break;
+    case "paul":
+      write("i'm paul and i play the bass");
+      break;
+    case "george":
+      write("i'm george and i play a quitar");
+      break;
+    default:
+      write(beatle + "is not a beatle");
+  }
+}
+introduce("george");
+introduce("paul");
+introduce("ringo");
+introduce("elvis");
+write("------------------------------------------------");
+//ITERATIONS
+
+//for...in c#'taki foreach ile benzer
+var tom ={
+  name: "Thomas",
+  age: 70
+};
+
+for(var propertyKey in tom){
+  write(propertyKey);
+  write(tom[propertyKey]);
+}
+ var keepGoing = true;
+while(keepGoing){
+  write("while loop");
+  keepGoing = false;
+}
+//do-while ile yanlış olsa bile en az bir kere fonksiyon çalıştırılır
+do{
+  write("do while loop");
+}
+while(keepGoing);
+write("-----------------------------");
+//Error Handling
+//try bloğunda yakalanan hata catch bloğuna gönderilir
+try{
+  throw{
+    name:"SomethingWentWrongError",
+    message:"something went wrong. You should fix it"
+  };
+}
+//cath bloğunda hata oluşması durumunda yapılacaklar yazılır
+catch(e){
+  write(e.name + " : " + e.message);
+  }
+finally{
+  write("finally bloğu her zaman çalışır");
+}
+</script>
+</body>
+</html>

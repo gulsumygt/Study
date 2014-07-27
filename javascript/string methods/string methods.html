@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2014 by anonymous (http://jsbin.com/totoxuqi/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+  <title>JS Bin</title>
+
+<style id="jsbin-css">
+
+</style>
+</head>
+<body>
+<p id='message'>
+<script>
+function write(message){
+  document.getElementById('message').innerHTML += message + '</br>';
+}
+function newParagraph(){
+  write("");
+}
+//charAt metodu karakter dizisi içinde belirtilen konumdaki karakteri verir
+var character="abcd".charAt(2);
+write("the third character of 'abcd' is: " + character);
+write("type of character is: "+ typeof character);
+newParagraph();
+//indexOf
+var index = "abcd".indexOf('c');
+write("index of c in 'abcd' is : "+ index);
+newParagraph();
+//search metodu index ile aynı işlevi görür
+index = "abcd".search(/c/);
+write("index of c in 'abcd' is(using search method) : "+index);
+newParagraph();
+//replace
+var lyric="3 oh 3 it's a magic number";
+write('lyric.replace("3","4"): '+ lyric.replace("3","4"));
+write('lyric: '+ lyric);//orjinal değeri değişmedi
+write('lyric.replace(/3/,"4"): '+ lyric.replace(/3/,"4"));
+write('lyric.replace(/3/g,"4"): '+lyric.replace(/3/g,"4"));//g global olarak değişmesini sağladı
+newParagraph();
+//slice metod belirtilen karakterleri karakter dizisinden çıkarır ve değer olarak döndürür
+var letters="abcd";
+write('letters.slice(1,3): '+letters.slice(1,3));
+newParagraph();
+//sprit metod karakter dizisini bölmek için kullanılır
+var words="the western wave has all a-frame".split(" ");//kelime kelime ayırmak için boşluk kullandık
+for(var i=0;i<words.length;i++){
+  write(words[i]);
+}
+var letters="abcd".split("");
+for(var i=0;i<letters.length;i++){
+  write(letters[i]);
+}
+newParagraph();
+
+//toUpperCase/toLowerCase metodları string dizisindeki harfleri küçük veya büyük yapar
+
+var name = "Frank";
+write("upper case of 'Frank': "+ name.toUpperCase());
+write("lower case of 'Frank': "+ name.toLowerCase());
+</script>
+</body>
+</html>
