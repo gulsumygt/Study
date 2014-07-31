@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2014 by anonymous (http://jsbin.com/xudotoyi/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+  <title>JS Bin</title>
+
+<style id="jsbin-css">
+
+</style>
+</head>
+<body>
+<p id='message'>
+<script>
+function write(message){
+  document.getElementById('message').innerHTML += message + '</br>';
+}
+function newParagraph(){
+  write("");
+}
+//search
+//dizide istenilen karakterin indeksini verir
+var result="abcd".search(/c/);
+write("index of c: "+ result);
+newParagraph();
+
+//exec
+var input= "text with some <strong>highlighted</strong> parts.";
+var expression=/<strong>(.*)<\/strong>/;//(.*) strong metodu arasındaki bütün karakterleri temsil eder.
+var result= expression.exec(input);
+write("matched substring: "+ result[0]);
+write("first capture group: "+result[1]);
+newParagraph();
+
+//test
+//verilen dizide istenilen ifadenin varlığını kontrol eder
+var containsANumber=/d/.test("abc4de");// /d/ ifadesi ile decimal number araması yapar
+write("abc4de contains a number: " + containsANumber);
+newParagraph();
+
+//replace- replacement can be a string or function
+//yer değiştirme metodu
+// (\w+)-> bir veya birden fazla karakteri temsil eder,bu karakter arasında boşluk bırakarak her bir kelimeyi işleme koyduk.
+ var updated="Fred brooks merhaba".replace(/(\w+) (\w+) (\w+)/g,function(match,capture1,capture2,capture3){
+   return capture3.toUpperCase() + ',' + capture1;
+ });
+write(updated);
+newParagraph();
+
+//date
+//ay parametresi 0 tabanlıdır.Ocak 0. aydır
+
+//26 november(kasım)
+var birthday=new Date(2010,10,26);
+write(birthday);
+write(birthday.toUTCString());
+
+//date substraction
+var from=new Date();
+for(var i=0; i<10000000; i++){
+  var result=Math.sqrt(i);
+}
+var to = new Date();
+var elapsed = to - from;
+write("calculating the square root of 100,000,000 numbers took: "+ elapsed + " miliseconds");
+newParagraph();
+
+//Math
+//Math.abs
+write("Math.abs(4.2): " + Math.abs(4.2));
+write("Math.abs(-4.2): " + Math.abs(-4.2));
+newParagraph();
+
+//Math.floor
+//verilen sayıya eşit yada küçük sayıyı verir
+write("Math.floor(1.908): " +Math.floor(1.908));
+write("Math.floor(-1.908): " +Math.floor(-1.908));
+newParagraph();
+
+//Math.ceil
+//kendisine eşit yada büyük sayıyı verir
+write("Math.ceil(1.908): " + Math.ceil(1.908));
+write("Math.ceil(-1.908): " + Math.ceil(-1.908));
+newParagraph();
+//Math.pow
+write("Math.pow(3,2): "+ Math.pow(3,2));
+newParagraph();
+
+//Math.random
+write("Math.random(): " +Math.random());
+write("Math.random(): " +Math.random());
+newParagraph();
+
+//Math.round
+write("Math.round(2.5): " +Math.round(2.5));
+write("Math.round(-2.2): " +Math.round(-2.2));
+</script>
+</body>
+</html>

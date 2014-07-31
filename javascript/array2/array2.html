@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="//jashkenas.github.io/underscore/underscore-min.js"></script>
+  <meta charset="utf-8">
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2014 by anonymous (http://jsbin.com/meligiri/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+  <title>JS Bin</title>
+
+<style id="jsbin-css">
+
+</style>
+</head>
+<body>
+<p id='message'>
+<script>
+function write(message){
+  document.getElementById('message').innerHTML += message + '</br>';
+}
+function newParagraph(){
+  write("");
+}
+var numbers=[1,2,3];
+//functional style
+_.each(numbers,function(num){
+  write(num);
+});
+newParagraph();
+//object-oriented style
+_(numbers).each(function(num){
+  write(num);
+});
+newParagraph();
+
+//map
+
+//bir diziyi başka bir diziye çevirebiliriz.
+var doubled= _(numbers).map(function(num){
+  return 2*num;
+});
+write("[1,2,3] doubled: "+doubled);
+newParagraph();
+
+//reduce
+//dizinin elemanları arasında gezinip hesaplamaları yapıp geriye sonuç döndürür
+var total=_(doubled).reduce(function(memo,num){
+  return memo+num;
+},0);
+write("[2,4,6] reduced: "+total);
+newParagraph();
+
+//select
+//dizinin elemanlarını teker taker fonksiyona sokar ve true değerini döndürenleri alır.
+var evens=_([1,2,3,4,5,6]).select(function(num){
+  return num % 2===0;
+});
+write("[1,2,3,4,5,6] evens: "+ evens);
+newParagraph();
+
+//all
+var allNumbers=_([1,2,'a']).all(function(item){
+  return typeof item==="number";
+});
+write(allNumbers);
+newParagraph();
+
+//include
+//dizinin içinde aranan elemanın varlığını kontrol eder
+var hasPeanuts=_(['sugar','salt','peanut','caramel']).include("peanut");
+write(hasPeanuts);
+newParagraph();
+
+//max
+write(_({a:3,b:2,c:1}).max());
+</script>
+</body>
+</html>
