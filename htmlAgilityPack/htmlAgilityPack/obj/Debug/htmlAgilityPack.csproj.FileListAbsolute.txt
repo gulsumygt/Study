@@ -1,0 +1,8 @@
+D:\projects\htmlAgilityPack\htmlAgilityPack\bin\Debug\htmlAgilityPack.exe.config
+D:\projects\htmlAgilityPack\htmlAgilityPack\bin\Debug\htmlAgilityPack.exe
+D:\projects\htmlAgilityPack\htmlAgilityPack\bin\Debug\htmlAgilityPack.pdb
+D:\projects\htmlAgilityPack\htmlAgilityPack\bin\Debug\HtmlAgilityPack.dll
+D:\projects\htmlAgilityPack\htmlAgilityPack\bin\Debug\HtmlAgilityPack.xml
+D:\projects\htmlAgilityPack\htmlAgilityPack\obj\Debug\htmlAgilityPack.csprojResolveAssemblyReference.cache
+D:\projects\htmlAgilityPack\htmlAgilityPack\obj\Debug\htmlAgilityPack.exe
+D:\projects\htmlAgilityPack\htmlAgilityPack\obj\Debug\htmlAgilityPack.pdb
